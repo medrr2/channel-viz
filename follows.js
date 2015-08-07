@@ -12,13 +12,13 @@
 		hideForm		= 0;
 	
 */
-		var defaultKey		= 'UKBTHyYUlrVrIE7358vpKnAdo9BtNNe8wtD4jZbEhDHRlM6c', // Unique master Xively API key to be used as a default
+		var defaultKey		= 'mnPg4i5RlX0F0LnfcGgkmBpDSlDZqxTmhC3907C5LgmIK3cb', // Unique master Xively API key to be used as a default
 		defaultFeeds	= [1128002398], // Comma separated array of Xively Feed ID numbers
 		applicationName	= 'My Pi's Power, // Replaces Xively logo in the header
-		dataDuration	= '10', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
-		dataInterval	= 0, // Default interval for data to be displayed (in seconds)
+		dataDuration	= '90days', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
+		dataInterval	= 10800, // Default interval for data to be displayed (in seconds)
 		dataColor		= 'FE9A2E', // CSS HEX value of color to represent data (omit leading #)
-		hideForm		= 0; // To hide input form use value of 1, otherwise set to 0
+		hideForm		= 1; // To hide input form use value of 1, otherwise set to 0
 
 // Function Declarations
 
@@ -148,7 +148,7 @@
 										element: document.querySelector('#graph-' + feedId + '-' + datastream.id),
 										width: 600,
 										height: 200,
-										renderer: 'area',
+										renderer: 'line',
 										min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										padding: {
