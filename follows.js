@@ -261,7 +261,7 @@
 						$('#feed-' + data.id + ' .tags').addClass('hidden');
 					}
 
-					// Location
+				/*	// Location
 					if(data.location) {
 						if(data.location.name || data.location.lat || data.location.ele || data.location.disposition) {
 
@@ -320,7 +320,7 @@
 							$('#feed-' + data.id + ' .elevation').addClass('hidden');
 							$('#feed-' + data.id + ' .disposition').addClass('hidden');
 							$('#feed-' + data.id + ' .map').addClass('hidden');
-					}
+					} */
 
 					$('#feed-' + data.id + ' .duration-hour').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
